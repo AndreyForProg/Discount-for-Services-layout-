@@ -1,0 +1,49 @@
+/* Mixins:
+   ========================================================================== */
+
+// px to rem
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1rem;
+}
+
+// size to one line
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// font to one line
+@mixin font($font, $size, $color) {
+  font-family: $font;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin backgroundImg($img) {
+  background-image: url(../img/#{$img});
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+// placeholder helper
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}

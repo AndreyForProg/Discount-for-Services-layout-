@@ -1,0 +1,103 @@
+main {
+  color: black;
+  text-align: center;
+  padding-bottom: 65px;
+  .goods_title {
+    margin: 42px 0;
+    @include font($titleFont2, $titleFont2Size, $titleFont2Color);
+  }
+  .goods {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .good {
+    height: 590px;
+    padding: 20px 10px;
+    border: 1px solid #d1d1d1;
+    position: relative;
+    &:hover {
+      box-shadow: 0px -2px 20px -4px rgba(0,0,0,0.75);
+    }
+    &:hover .good_button{
+      color: black;
+      font-size: $buyNowActive;
+      background-color: $ActiveButtonColor;
+    }
+    .good_title{
+      height: 15%;
+      @include font($titleFont2, $formFontrSize, $titleFont2Color);
+    }
+    .good_img {
+      width: 100%;
+      height: 25%;
+    }
+    .img1 {
+      @include backgroundImg('Продукт.png');
+    }
+    .img2 {
+      @include backgroundImg('Прдукт.png');
+    }
+    .img3 {
+      @include backgroundImg('Продукт3.png');
+      height: 30%;
+      background-size: 200px;
+    }
+    .img4 {
+      @include backgroundImg('Продукт4.png');
+    }
+    .good_price {
+      height: 10%;
+      font-family: 'montserrat';
+      font-size: 29px;
+    }
+    .good_descr {
+      height: 30%;
+      @include font($mainFont, $mainFontSizeCartDescr, $titleFont2Color);
+      line-height: 20px;
+    }
+    .good_count {
+      width: 40%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 12%;
+      border: 1px solid #d9d9d9;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 50px;
+      padding: 5px 20px;
+      button {
+        background: transparent;
+        border: none;
+        outline: none;
+        font-weight: normal;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+    .gg {
+      position: absolute;
+      right: 20%;
+      bottom: 12%;
+      transform: translateY(-12%);
+    }
+    .good_button {
+      height: 7%;
+      @include font($titleFont2, $mainFontSize, #6b6b6b);
+      position: absolute;
+      bottom: 2%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: transparent;
+      border: 2px solid #43cb83;
+      border-radius: 50px;
+      padding: 0 50px;
+      text-transform: uppercase;
+      outline: none;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+    }
+  }
+}

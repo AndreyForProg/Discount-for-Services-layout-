@@ -1,0 +1,16 @@
+mixin headerNavItem(title)
+  button.navigation_item= title
+
+mixin good(title, img, price, descr, count)
+  .good
+    h2.good_title= title
+    .good_img(class = img)
+    .good_price= '$' + price
+    .good_descr= descr
+    .good_count__row
+      .good_count
+        button -
+        .count= count
+        button +
+      .gg шт
+    button.good_button buy now

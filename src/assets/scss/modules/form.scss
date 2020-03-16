@@ -1,0 +1,92 @@
+.form {
+  .wrapper {
+    background-image: url(../img/formFon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .wrapper-content {
+      display: flex;
+      flex-direction: column;
+      padding-top: 50px;
+      width: 900px;
+      color: black;
+      text-align: center;
+      align-items: center;
+      .form_title {
+        @include font($titleFont2, $titleFont2Size, $titleFont2Color);
+      }
+      .steps {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0 25px;
+        .step {
+          font-family: $titleFont1;
+          font-size: $formStepsSize;
+          padding: 20px 40px;
+          text-transform: uppercase;
+          background: transparent;
+          transition: all .3s ease;
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          outline: none;
+        }
+        .activeStep {
+          background-color: white;
+        }
+      }
+      .form_descr {
+        font-size: $formFontrSize;
+        text-align: left;
+      }
+      .form_items {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        width: 650px;
+        max-width: 100%;
+        input {
+          font-size: $formFontrSize;
+          font-family: $titleFont2;
+          color: black;
+          background-color: #ebebef;
+          border: 1.5px solid white;
+          border-radius: 50px;
+          padding: 15px 25px;
+          margin-bottom: 25px;
+          outline: none;
+        }
+        button {
+          margin: 0 auto;
+          width: 200px;
+          padding: 20px 50px;
+          background-color: white;
+          color: $ActiveButtonColor;
+          text-transform: uppercase;
+          border: none;
+          border-radius: 50px;
+          outline: none;
+          cursor: pointer;
+          font-size: $formButtonSize;
+        }
+      }
+      .form_descr-step2{
+        display: none;
+      }
+      .form_items-step2 {
+        display: none;
+      }
+      .form_items-step3 {
+        display: none;
+      }
+      .form_descr-step3{
+        display: none;
+      }
+      .formBtn {
+        position: relative;
+      }
+      .errorText {
+        opacity: 0;
+      }
+    }
+  }
+}
