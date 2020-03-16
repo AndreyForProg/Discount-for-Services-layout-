@@ -65,6 +65,9 @@ header {
     width: 30%;
     position: absolute;
   }
+  .footer_img {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -166,30 +169,27 @@ header {
             .menu__item {
               transition-duration: .25s;
             }
-        }
-        .header_content {
-          .header_info {
-            position: absolute;
-            left: 1%;
-            top: 0;
-            margin: 0 auto;
-            background-image: url(../img/Фон.jpg);
-            transition: all ease .5s;
-            .header_info-title {
-              text-align: center;
+          }
+          .header_content {
+            .header_info {
+              position: absolute;
+              left: 1%;
+              top: 0;
+              margin: 0 auto;
+              background-image: url(../img/Фон.jpg);
+              transition: all ease .5s;
+              .header_info-title {
+                text-align: center;
+              }
             }
           }
         }
-      }
-      .header_img{
-        display: none;
-      }
-      .header_navigation {
-        opacity: 0;
-      }
-      .footer_img {
-        display: none;
-      }
+        .header_img{
+          display: none;
+        }
+        .header_navigation {
+          opacity: 0;
+        }
       }
     }
   }
