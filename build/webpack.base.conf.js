@@ -24,13 +24,13 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src
+    app: PATHS.src,
     // module: `${PATHS.src}/your-module.js`,
   },
   output: {
-    filename: `${PATHS.assets}js/[name].[contenthash].js`,
+    filename: `./${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.dist,
-    publicPath: "/"
+    publicPath: ""
   },
   optimization: {
     splitChunks: {
@@ -65,7 +65,7 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: "file-loader",
         options: {
-          name: "[name].[ext]"
+          name: '[name].[ext]'
         }
       },
       {
@@ -123,11 +123,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[contenthash].css`
+      filename: `./${PATHS.assets}css/[name].[contenthash].css`
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: 'fonts' },
       { from: `${PATHS.src}/static`, to: "" }
     ]),
 

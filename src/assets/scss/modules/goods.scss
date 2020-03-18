@@ -33,18 +33,18 @@ main {
       height: 25%;
     }
     .img1 {
-      @include backgroundImg('Продукт.png');
+      @include backgroundImg('product.png');
     }
     .img2 {
-      @include backgroundImg('Прдукт.png');
+      @include backgroundImg('prodct.png');
     }
     .img3 {
-      @include backgroundImg('Продукт3.png');
+      @include backgroundImg('product3.png');
       height: 30%;
       background-size: 200px;
     }
     .img4 {
-      @include backgroundImg('Продукт4.png');
+      @include backgroundImg('product4.png');
     }
     .good_price {
       height: 10%;

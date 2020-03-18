@@ -1,6 +1,6 @@
 footer {
   .wrapper {
-    background-image: url(../img/Фон.jpg);
+    background-image: url(../img/fon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -46,7 +46,7 @@ footer {
       .footer_img {
         @include size(600px, 500px);
         max-width: 50%;
-        background-image: url(../img/Рука.png);
+        background-image: url(../img/hand.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: bottom left;
