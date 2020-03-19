@@ -32,7 +32,8 @@ const formInp3 = document.querySelector('.form_items-step3')
 goNextForm.forEach(btn => {
   btn.addEventListener('click', (e) => {
     if(e.target.innerText === 'NEXT' && steps[0].classList.contains('activeStep')) {
-      if((name.value == '') || (lastName == '') || (email == '')) {
+      let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+      if((name.value == '') || (lastName.value == '') || (reg.test(email.value) == false)) {
         errorText.style.opacity = 1
       } else {
         steps[0].classList.remove('activeStep')
@@ -43,7 +44,7 @@ goNextForm.forEach(btn => {
         formInp2.style.display = 'flex'
       }
     } else if(e.target.innerText === 'NEXT' && steps[1].classList.contains('activeStep')) {
-      if((name2.value == '') || (lastName2 == '') || (email2 == '')) {
+      if((name2.value == '') || (lastName2.value == '') || (reg.test(email.value) == false)) {
         errorText2.innerText = 'заполните все поля корректно'
       } else {
         steps[1].classList.remove('activeStep')
@@ -54,7 +55,7 @@ goNextForm.forEach(btn => {
         formInp3.style.display = 'flex'
       }
     } else {
-      if((name.value == '') || (lastName == '') || (email == '')) {
+      if((name.value == '') || (lastName.value == '') || (reg.test(email.value) == false)) {
         errorText.innerText = 'заполните все поля корректно'
       } else {
         steps[2].classList.remove('activeStep')
